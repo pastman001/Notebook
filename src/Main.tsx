@@ -1,7 +1,7 @@
-import React from "react";
-import "./style.css";
-import { Names } from "./comp/Names";
-import { Numbers } from "./comp/Numbers";
+import React from 'react';
+import { Names } from './comp/Names';
+import { Numbers } from './comp/Numbers';
+import './style.css';
 
 export const Main = () => {
   return (
