@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { contacts } from './Arr';
+import { Props } from '../../../../Store/Store';
 
-export const Number = () => {
+export const UserFriendsListNumbers: React.FC<Props> = ({ contacts }) => {
   const { id } = useParams<string>();
   const navigate = useNavigate();
   const goBack = () => navigate(-1);
@@ -26,7 +26,7 @@ export const Number = () => {
   const userUrl = `../${currentUser?.id}/1`;
 
   return (
-    <div className="notmain">
+    <div className="notMain">
       <div className="container">
         <div>Имя пользователя:</div>
         <Link to={userUrl}>{currentUser?.name}</Link>

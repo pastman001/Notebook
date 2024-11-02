@@ -1,19 +1,19 @@
 import React from 'react';
-import { Names } from './comp/Names';
-import { Numbers } from './comp/Numbers';
+import { MainUserNames, MainUserNumbers } from '.';
+import { Props } from '../../Store/Store';
 import './style.css';
 
-export const Main = () => {
+export const Main: React.FC<Props> = ({ contacts }) => {
   return (
     <div>
       <div className="main">
         <div className="container">Имена</div>
         <div className="container">Номера Телефонов</div>
         <div className="container">
-          <Names />
+          <MainUserNames contacts={contacts} />
         </div>
         <div className="container">
-          <Numbers />
+          <MainUserNumbers contacts={contacts} />
         </div>
       </div>
     </div>

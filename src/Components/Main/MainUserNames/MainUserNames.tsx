@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { contacts } from '../Arr';
+import { Props } from '../../../Store/Store';
 import '../style.css';
 
-export const Names = () => {
+export const MainUserNames: React.FC<Props> = ({ contacts }) => {
   return (
     <>
       {contacts.map((item) => {
-        const nameUrl = `${item.id}/1`;
+        const nameUrl = `${item.id}/names`;
         const key = `namesKeyId${item.id}`;
         return (
           <div key={key}>

@@ -1,4 +1,15 @@
-export const contacts = [
+export type Props = {
+  contacts: Store[];
+};
+
+export type Store = {
+  id: number;
+  name: string;
+  surName: string;
+  phoneNumber: string;
+  friends: Array<number>;
+};
+export const contacts: Store[] = [
   {
     id: 1,
     name: 'Pit',
@@ -30,14 +41,14 @@ export const contacts = [
   {
     id: 5,
     name: 'Sam',
-    surName: 'Michaels',
+    surName: 'Michael',
     phoneNumber: '143-221-101',
     friends: [6, 7, 12],
   },
   {
     id: 6,
     name: 'Maria',
-    surName: 'Tatcher',
+    surName: 'Thatcher',
     phoneNumber: '122-122-111',
     friends: [9, 13],
   },
@@ -51,7 +62,7 @@ export const contacts = [
   {
     id: 8,
     name: 'Matt',
-    surName: 'Dimmerson',
+    surName: 'Dimmers',
     phoneNumber: '100-889-340',
     friends: [15, 16, 17],
   },
@@ -79,14 +90,14 @@ export const contacts = [
   {
     id: 12,
     name: 'Tomas',
-    surName: 'Harisson',
+    surName: 'Harrison',
     phoneNumber: '773-880-992',
     friends: [5, 11],
   },
   {
     id: 13,
     name: 'Mia',
-    surName: 'Heksley',
+    surName: 'Hensley',
     phoneNumber: '140-985-844',
     friends: [3, 5, 6, 7],
   },

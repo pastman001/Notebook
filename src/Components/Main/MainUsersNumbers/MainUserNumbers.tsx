@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { contacts } from '../Arr';
+import { Props } from '../../../Store/Store';
 import '../style.css';
 
-export const Numbers = () => {
+export const MainUserNumbers: React.FC<Props> = ({ contacts }) => {
   return (
     <>
       {contacts.map((item) => {
